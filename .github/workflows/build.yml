@@ -19,6 +19,9 @@ jobs:
           - os: ubuntu-latest
             rid: linux-x64
             exe: pdf-filler
+          - os: macos-13
+            rid: osx-x64
+            exe: pdf-filler
           - os: macos-latest
             rid: osx-arm64
             exe: pdf-filler
@@ -59,8 +62,9 @@ jobs:
         run: |
           mv artifacts/pdf-filler-win-x64/pdf-filler.exe  artifacts/pdf-filler-win-x64.exe
           mv artifacts/pdf-filler-linux-x64/pdf-filler     artifacts/pdf-filler-linux-x64
+          mv artifacts/pdf-filler-osx-x64/pdf-filler       artifacts/pdf-filler-osx-x64
           mv artifacts/pdf-filler-osx-arm64/pdf-filler     artifacts/pdf-filler-osx-arm64
-          chmod +x artifacts/pdf-filler-linux-x64 artifacts/pdf-filler-osx-arm64
+          chmod +x artifacts/pdf-filler-linux-x64 artifacts/pdf-filler-osx-x64 artifacts/pdf-filler-osx-arm64
 
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
@@ -68,4 +72,5 @@ jobs:
           files: |
             artifacts/pdf-filler-win-x64.exe
             artifacts/pdf-filler-linux-x64
+            artifacts/pdf-filler-osx-x64
             artifacts/pdf-filler-osx-arm64
