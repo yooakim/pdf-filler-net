@@ -1,0 +1,46 @@
+## .NET build output
+bin/
+obj/
+
+## Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+
+## VS Code
+.vscode/
+
+## NuGet
+*.nupkg
+*.snupkg
+nupkg/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Publish output
+publish/
+
+## Logs
+*.log
+logs/
+
+## Secrets / local config
+appsettings.local.json
+appsettings.Development.json
+*.pfx
+*.p12
+.env
+.env.*
+
+## Claude Code local settings
+.claude/settings.local.json
+
+## OS
+.DS_Store
+Thumbs.db
+desktop.ini
